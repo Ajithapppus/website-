@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedNova Business Solutions | Executive Business Services</title>
+    <meta name="description" content="Professional business support, virtual assistance, and productivity services for busy executives. Save time and increase productivity with RedNova.">
+    <meta name="keywords" content="business support, virtual assistance, consulting, appointment management">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E50914',
+                        dark: '#0A0A0A',
+                        grayDark: '#171717',
+                        accent: '#F5F5F5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans antialiased text-accent bg-dark">
+
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 bg-transparent transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-display font-bold text-2xl tracking-wider text-white">
+                        RED<span class="text-primary">NOVA</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="nav-link active font-medium text-sm tracking-wide">Home</a>
+                    <a href="about.html" class="nav-link font-medium text-sm tracking-wide">About</a>
+                    <a href="services.html" class="nav-link font-medium text-sm tracking-wide">Services</a>
+                    <a href="contact.html" class="nav-link font-medium text-sm tracking-wide">Contact</a>
+                    <a href="contact.html" class="btn-primary text-white px-6 py-2 rounded-full font-medium text-sm ml-4">Get Started</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-nav border-t border-gray-800 absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-primary">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white">About</a>
+                <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white">Services</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="slider-container">
+        <!-- Slide 1 -->
+        <div class="slide active">
+            <div class="slide-bg" style="background-image: url('images/hero1.png');"></div>
+            <div class="slide-overlay"></div>
+            <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4 max-w-5xl mx-auto">
+                <h1 class="font-display text-5xl md:text-7xl font-bold text-white mb-6 leading-tight fade-up">
+                    Helping Busy Professionals <br/><span class="text-gradient-red">Grow Faster</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl fade-up" style="animation-delay: 0.2s;">
+                    We handle the details so you can focus on the big picture. Executive support tailored for modern businesses.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 fade-up" style="animation-delay: 0.4s;">
+                    <a href="services.html" class="btn-primary text-white px-8 py-4 rounded-full font-semibold text-lg">Get Started</a>
+                    <a href="contact.html" class="glass-card hover:bg-white/10 text-white border border-white/20 px-8 py-4 rounded-full font-semibold text-lg transition-all">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide">
+            <div class="slide-bg" style="background-image: url('images/hero2.png');"></div>
+            <div class="slide-overlay"></div>
+            <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4 max-w-5xl mx-auto">
+                <h1 class="font-display text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                    Your Trusted Business <br/><span class="text-gradient-red">Support Partner</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl">
+                    Elevate your business operations with our premium executive services and strategic consulting.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="services.html" class="btn-primary text-white px-8 py-4 rounded-full font-semibold text-lg">Explore Services</a>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="slide">
+            <div class="slide-bg" style="background-image: url('images/hero3.png');"></div>
+            <div class="slide-overlay"></div>
+            <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4 max-w-5xl mx-auto">
+                <h1 class="font-display text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                    Save Time. <span class="text-gradient-red">Increase Productivity.</span><br/> Build Success.
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl">
+                    Unlocking your potential by managing the tasks that slow you down.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="contact.html" class="btn-primary text-white px-8 py-4 rounded-full font-semibold text-lg">Book a Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview Section -->
+    <section class="py-24 bg-dark relative" id="services-overview">
+        <!-- Abstract gradient blob -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full filter blur-3xl opacity-50 pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-white mb-4">Premium <span class="text-primary">Services</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Comprehensive solutions designed to streamline your workflow and accelerate your business growth.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-container">
+                <!-- Service 1 -->
+                <div class="glass-card p-8 rounded-2xl stagger-item group">
+                    <div class="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
+                        <i class="fas fa-headset text-primary group-hover:text-white text-2xl transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 font-display">Virtual Assistance</h3>
+                    <p class="text-gray-400 mb-6">Professional remote support for daily administrative tasks, email management, and scheduling.</p>
+                    <a href="services.html" class="text-primary font-medium flex items-center hover:text-white transition-colors">
+                        Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                <!-- Service 2 -->
+                <div class="glass-card p-8 rounded-2xl stagger-item group">
+                    <div class="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
+                        <i class="fas fa-chart-line text-primary group-hover:text-white text-2xl transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 font-display">Business Consulting</h3>
+                    <p class="text-gray-400 mb-6">Strategic insights and actionable plans to optimize operations and scale your enterprise.</p>
+                    <a href="services.html" class="text-primary font-medium flex items-center hover:text-white transition-colors">
+                        Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                <!-- Service 3 -->
+                <div class="glass-card p-8 rounded-2xl stagger-item group">
+                    <div class="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
+                        <i class="far fa-calendar-check text-primary group-hover:text-white text-2xl transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 font-display">Appointment Management</h3>
+                    <p class="text-gray-400 mb-6">Seamless calendar coordination, ensuring you never miss a vital meeting or opportunity.</p>
+                    <a href="services.html" class="text-primary font-medium flex items-center hover:text-white transition-colors">
+                        Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-12 fade-up">
+                <a href="services.html" class="inline-block border border-gray-700 hover:border-primary text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-primary/10">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us (Stats) Section -->
+    <section class="py-20 bg-grayDark relative border-y border-gray-800" id="stats-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center stagger-container">
+                <div class="stagger-item">
+                    <div class="text-4xl md:text-5xl font-display font-bold text-gradient-red mb-2"><span class="counter-value" data-target="500" data-plus="true">0</span></div>
+                    <p class="text-gray-400 font-medium tracking-wide uppercase text-sm">Happy Clients</p>
+                </div>
+                <div class="stagger-item">
+                    <div class="text-4xl md:text-5xl font-display font-bold text-gradient-red mb-2"><span class="counter-value" data-target="10" data-plus="true">0</span></div>
+                    <p class="text-gray-400 font-medium tracking-wide uppercase text-sm">Years Experience</p>
+                </div>
+                <div class="stagger-item">
+                    <div class="text-4xl md:text-5xl font-display font-bold text-gradient-red mb-2">24/7</div>
+                    <p class="text-gray-400 font-medium tracking-wide uppercase text-sm">Dedicated Support</p>
+                </div>
+                <div class="stagger-item">
+                    <div class="text-4xl md:text-5xl font-display font-bold text-gradient-red mb-2"><span class="counter-value" data-target="100">0</span>%</div>
+                    <p class="text-gray-400 font-medium tracking-wide uppercase text-sm">Client Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-white mb-4">Client <span class="text-primary">Success Stories</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Hear what industry leaders are saying about our premium support services.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-container">
+                <!-- Testimonial 1 -->
+                <div class="glass-card p-8 rounded-2xl stagger-item">
+                    <div class="flex text-primary mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"RedNova completely transformed how I manage my day. Their virtual assistants are top-tier professionals who anticipate my needs before I even ask."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center text-xl font-bold text-white mr-4">S</div>
+                        <div>
+                            <h4 class="text-white font-bold font-display">Sarah Jenkins</h4>
+                            <p class="text-gray-500 text-sm">CEO, TechFlow</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="glass-card p-8 rounded-2xl stagger-item">
+                    <div class="flex text-primary mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"The business consulting service helped us streamline our operations and cut costs by 20%. They are an invaluable extension of our executive team."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center text-xl font-bold text-white mr-4">M</div>
+                        <div>
+                            <h4 class="text-white font-bold font-display">Michael Chen</h4>
+                            <p class="text-gray-500 text-sm">Founder, DataSync</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="glass-card p-8 rounded-2xl stagger-item">
+                    <div class="flex text-primary mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"Outstanding customer service and absolute reliability. If you want to scale your business without burning out, hire RedNova immediately."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center text-xl font-bold text-white mr-4">E</div>
+                        <div>
+                            <h4 class="text-white font-bold font-display">Elena Rodriguez</h4>
+                            <p class="text-gray-500 text-sm">Managing Director, Horizon</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-To-Action Section -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-red-900 to-black z-0 opacity-80"></div>
+        <div class="max-w-4xl mx-auto px-4 relative z-10 text-center fade-up">
+            <h2 class="font-display text-4xl md:text-5xl font-bold text-white mb-6">Ready to grow your business?</h2>
+            <p class="text-xl text-gray-200 mb-10">Stop wasting time on tasks that don't scale. Partner with us and reclaim your productivity today.</p>
+            <a href="contact.html" class="bg-white text-primary hover:bg-gray-200 px-10 py-4 rounded-full font-bold text-lg shadow-xl transition-all hover:scale-105 inline-block">Book a Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-grayDark pt-20 pb-10 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="font-display font-bold text-2xl tracking-wider text-white mb-6 inline-block">
+                        RED<span class="text-primary">NOVA</span>
+                    </a>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                        Premium business support and virtual assistance for busy professionals who demand excellence.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="about.html" class="text-gray-400 hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-primary transition-colors">Our Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Pricing Plans</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Testimonials</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-primary transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Contact Info</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i>
+                            <span>100 Executive Drive, Suite 500<br>New York, NY 10001</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-primary"></i>
+                            <span>+1 (800) 555-0199</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary"></i>
+                            <span>contact@rednova.com</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Newsletter</h4>
+                    <p class="text-gray-400 text-sm mb-4">Subscribe for the latest business insights and productivity tips.</p>
+                    <form class="flex flex-col space-y-3">
+                        <input type="email" placeholder="Email Address" class="bg-gray-800 border border-gray-700 text-white px-4 py-3 rounded-lg focus:outline-none focus:border-primary w-full transition-colors">
+                        <button type="button" class="btn-primary text-white px-4 py-3 rounded-lg font-medium w-full">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; 2026 RedNova Business Solutions. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div id="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | RedNova Business Solutions</title>
+    <meta name="description" content="Learn more about RedNova Business Solutions, our mission, vision, and the expert team dedicated to your business success.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#E50914', dark: '#0A0A0A', grayDark: '#171717', accent: '#F5F5F5' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Outfit', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans antialiased text-accent bg-dark">
+    
+    <!-- Loader -->
+    <div id="loader" class="loader"><div class="loader-spinner"></div></div>
+
+    <!-- Header / Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-display font-bold text-2xl tracking-wider text-white">RED<span class="text-primary">NOVA</span></a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="nav-link font-medium text-sm tracking-wide">Home</a>
+                    <a href="about.html" class="nav-link active font-medium text-sm tracking-wide">About</a>
+                    <a href="services.html" class="nav-link font-medium text-sm tracking-wide">Services</a>
+                    <a href="contact.html" class="nav-link font-medium text-sm tracking-wide">Contact</a>
+                    <a href="contact.html" class="btn-primary text-white px-6 py-2 rounded-full font-medium text-sm ml-4">Get Started</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-primary focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden glass-nav border-t border-gray-800 absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-primary">About</a>
+                <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white">Services</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-grayDark relative border-b border-gray-800">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] z-0 opacity-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center fade-up">
+            <h1 class="font-display text-4xl md:text-6xl font-bold text-white mb-4">About <span class="text-primary">RedNova</span></h1>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto">Empowering businesses through exceptional executive support and strategic solutions.</p>
+        </div>
+    </section>
+
+    <!-- Introduction & Mission/Vision -->
+    <section class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div class="fade-up">
+                    <h2 class="font-display text-3xl font-bold text-white mb-6">Our Story</h2>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Founded with a passion for productivity, RedNova Business Solutions was built on a simple premise: executives shouldn't be bogged down by administrative tasks. Over the past decade, we have partnered with hundreds of businesses to streamline their operations, manage their daily tasks, and consult on growth strategies.
+                    </p>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        Our premium black and red aesthetics mirror our approach—bold, decisive, and relentlessly focused on delivering top-tier performance.
+                    </p>
+                </div>
+                <div class="space-y-8 fade-up stagger-container">
+                    <div class="glass-card p-8 rounded-xl border-l-4 border-l-primary stagger-item">
+                        <h3 class="text-xl font-bold text-white mb-2 font-display"><i class="fas fa-bullseye text-primary mr-2"></i> Our Mission</h3>
+                        <p class="text-gray-400">To provide elite, reliable, and scalable business support services that empower professionals to reclaim their time and focus on what truly matters.</p>
+                    </div>
+                    <div class="glass-card p-8 rounded-xl border-l-4 border-l-white stagger-item">
+                        <h3 class="text-xl font-bold text-white mb-2 font-display"><i class="fas fa-eye text-white mr-2"></i> Our Vision</h3>
+                        <p class="text-gray-400">To be the world's leading partner in executive assistance and business strategy, redefining how modern businesses operate efficiently.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="py-20 bg-grayDark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-white mb-4">Our <span class="text-primary">Journey</span></h2>
+            </div>
+            <div class="relative wrap overflow-hidden p-10 h-full stagger-container">
+                <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%"></div>
+                
+                <div class="mb-8 flex justify-between items-center w-full right-timeline stagger-item">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-primary shadow-xl w-8 h-8 rounded-full"></div>
+                    <div class="order-1 glass-card rounded-lg shadow-xl w-5/12 px-6 py-4">
+                        <h3 class="font-bold text-white text-xl mb-1">2016 - The Beginning</h3>
+                        <p class="text-sm leading-snug text-gray-400">RedNova is established as a boutique virtual assistance firm.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline stagger-item">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-gray-600 shadow-xl w-8 h-8 rounded-full"></div>
+                    <div class="order-1 glass-card rounded-lg shadow-xl w-5/12 px-6 py-4 text-right">
+                        <h3 class="font-bold text-white text-xl mb-1">2019 - Expanding Horizons</h3>
+                        <p class="text-sm leading-snug text-gray-400">Added business consulting and strategy services.</p>
+                    </div>
+                </div>
+
+                <div class="mb-8 flex justify-between items-center w-full right-timeline stagger-item">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-primary shadow-xl w-8 h-8 rounded-full"></div>
+                    <div class="order-1 glass-card rounded-lg shadow-xl w-5/12 px-6 py-4">
+                        <h3 class="font-bold text-white text-xl mb-1">2022 - Global Reach</h3>
+                        <p class="text-sm leading-snug text-gray-400">Expanded our client base internationally, serving 500+ clients.</p>
+                    </div>
+                </div>
+
+                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline stagger-item">
+                    <div class="order-1 w-5/12"></div>
+                    <div class="z-20 flex items-center order-1 bg-gray-600 shadow-xl w-8 h-8 rounded-full"></div>
+                    <div class="order-1 glass-card rounded-lg shadow-xl w-5/12 px-6 py-4 text-right">
+                        <h3 class="font-bold text-white text-xl mb-1">2026 - Innovation Era</h3>
+                        <p class="text-sm leading-snug text-gray-400">Integrating AI and advanced data management into our core services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-white mb-4">Meet the <span class="text-primary">Experts</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">The brilliant minds powering your success.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 stagger-container">
+                <!-- Team Member 1 -->
+                <div class="glass-card p-6 rounded-2xl text-center stagger-item group">
+                    <div class="w-24 h-24 mx-auto rounded-full bg-gray-700 mb-4 overflow-hidden border-2 border-transparent group-hover:border-primary transition-colors flex items-center justify-center text-3xl text-gray-400">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg font-display">David Sterling</h3>
+                    <p class="text-primary text-sm mb-4">Founder & CEO</p>
+                    <div class="flex justify-center space-x-3 text-gray-400">
+                        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="glass-card p-6 rounded-2xl text-center stagger-item group">
+                    <div class="w-24 h-24 mx-auto rounded-full bg-gray-700 mb-4 overflow-hidden border-2 border-transparent group-hover:border-primary transition-colors flex items-center justify-center text-3xl text-gray-400">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg font-display">Amanda Ray</h3>
+                    <p class="text-primary text-sm mb-4">Head of Operations</p>
+                    <div class="flex justify-center space-x-3 text-gray-400">
+                        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="glass-card p-6 rounded-2xl text-center stagger-item group">
+                    <div class="w-24 h-24 mx-auto rounded-full bg-gray-700 mb-4 overflow-hidden border-2 border-transparent group-hover:border-primary transition-colors flex items-center justify-center text-3xl text-gray-400">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg font-display">Marcus Vance</h3>
+                    <p class="text-primary text-sm mb-4">Lead Consultant</p>
+                    <div class="flex justify-center space-x-3 text-gray-400">
+                        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <!-- Team Member 4 -->
+                <div class="glass-card p-6 rounded-2xl text-center stagger-item group">
+                    <div class="w-24 h-24 mx-auto rounded-full bg-gray-700 mb-4 overflow-hidden border-2 border-transparent group-hover:border-primary transition-colors flex items-center justify-center text-3xl text-gray-400">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg font-display">Chloe Kim</h3>
+                    <p class="text-primary text-sm mb-4">Director of Virtual Assistance</p>
+                    <div class="flex justify-center space-x-3 text-gray-400">
+                        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-grayDark pt-20 pb-10 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="font-display font-bold text-2xl tracking-wider text-white mb-6 inline-block">RED<span class="text-primary">NOVA</span></a>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">Premium business support and virtual assistance for busy professionals who demand excellence.</p>
+                </div>
+                <!-- Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="about.html" class="text-gray-400 hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-primary transition-colors">Our Services</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-primary transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Contact Info</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-start"><i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i><span>100 Executive Drive, Suite 500<br>New York, NY 10001</span></li>
+                        <li class="flex items-center"><i class="fas fa-phone mr-3 text-primary"></i><span>+1 (800) 555-0199</span></li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-3 text-primary"></i><span>contact@rednova.com</span></li>
+                    </ul>
+                </div>
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Newsletter</h4>
+                    <p class="text-gray-400 text-sm mb-4">Subscribe for the latest business insights.</p>
+                    <form class="flex flex-col space-y-3">
+                        <input type="email" placeholder="Email Address" class="bg-gray-800 border border-gray-700 text-white px-4 py-3 rounded-lg focus:outline-none focus:border-primary w-full">
+                        <button type="button" class="btn-primary text-white px-4 py-3 rounded-lg font-medium w-full">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; 2026 RedNova Business Solutions. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="scroll-top"><i class="fas fa-arrow-up"></i></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
